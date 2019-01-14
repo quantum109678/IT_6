@@ -16,6 +16,7 @@ for line in open(file,'r'):
 
 print(data)
 C=[[],[set([i]) for i in range(MinItemId,MaxItemId+1)]]
+L=[[]]
 print(C)
 
 i=1
@@ -28,11 +29,12 @@ while 1:
 		for j in range(LenCurrCandidate):
 			if len(transaction.intersection(CurrCandidateSet[j]))==len(CurrCandidateSet[j]):
 				SupCount[j]+=1
-	L=[]
+	CurrL=[]
 	for j in range(LenCurrCandidate):
 		if SupCount[j] >= MinSup:
-			L.append(CurrCandidateSet[j])
-	print(L)
+			CurrL.append(CurrCandidateSet[j])
+	L.append(CurrL)
+	#NextC Generation code and breaking condition
 	break
 
 
