@@ -1,6 +1,3 @@
-import pandas as pd 
-import numpy as np 
- 
 file="test.csv"
 items=[]
 MaxItemId=0
@@ -34,6 +31,7 @@ while 1:
 		if SupCount[j] >= MinSup:
 			CurrL.append(CurrCandidateSet[j])
 	L.append(CurrL)
+    print("L1:",L[1])
 	#NextC Generation code and breaking condition
 	break
 
